@@ -13,12 +13,12 @@ class RatingSerializer(serializers.ModelSerializer):
         model = Rating 
         fields = ['user', 'menuitem_id', 'rating']
         validators = [
-            UniqueTogetherValidator(queryset=Rating.objects.all(), fields=['user', 'menuitem_id', 'rating'])
+            UniqueTogetherValidator(queryset=Rating.objects.all(), fields=['user', 'menuitem_id'])
         ]
 
-    extra_kwargs = {
-        'rating': {
-            "max_value": 5, 
-            "min_value": 0,
+        extra_kwargs = {
+            'rating': {
+                "max_value": 5, 
+                "min_value": 0,
+            }
         }
-    }
