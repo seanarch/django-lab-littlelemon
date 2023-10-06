@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'LittleLemonDRF',
     'rest_framework.authtoken',
+    'rest_framework',
     'djoser',
 ]
 
